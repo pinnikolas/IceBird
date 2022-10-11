@@ -1,0 +1,45 @@
+.container-header {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  background-color: #edeef0;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 40px;
+
+    a {
+      color: #222;
+    }
+  }
+
+  &__search-input {
+    background-color: #d3d4d5;
+    border-radius: 8px;
+    padding: 6px;
+
+    &::placeholder {
+      color: #8f99a5;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    padding: 5px;
+  }
+}
