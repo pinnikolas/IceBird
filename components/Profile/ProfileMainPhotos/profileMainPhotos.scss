@@ -1,0 +1,29 @@
+.profile-main {
+  &__photos {
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    border: 1px solid #d3d9de;
+    box-shadow: 0px 0px 14px 1px rgba(153, 160, 165, 0.2);
+
+    &-menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    &-item {
+      font-size: 14px;
+
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+}

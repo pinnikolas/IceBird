@@ -32,9 +32,14 @@ body {
 
   &-main {
     display: flex;
-    gap: 20px;
+    gap: 10px;
   }
 }
 
 @import "../components/Header/header.scss";
 @import "../components/SideBar/sideBar.scss";
+
+// Profile
+
+@import "../components/Profile/ProfileHeader/profileHeader.scss";
+@import "../components/Profile/ProfileMainPhotos/profileMainPhotos.scss"

@@ -8,8 +8,19 @@
   &__item {
     font-size: 13px;
 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px;
+    padding: 4px 8px;
+
+    &:hover {
+      background-color: rgba(186, 194, 212, 0.3);
+    }
+
     a {
       color: #222;
+      border-radius: 4px;
     }
   }
 }
