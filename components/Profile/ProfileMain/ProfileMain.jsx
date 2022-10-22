@@ -1,9 +1,10 @@
 import ProfileMainPhotos from "../ProfileMainPhotos/ProfileMainPhotos";
+import ProfileMainTabs from "../ProfileMainTabs/ProfileMainTabs";
 
 const ProfileMaim = () => {
   return (
     <div className="profile-main">
-      <ProfileMainPhotos />
+      <ProfileMainTabs />
     </div>
   );
 };
