@@ -14,6 +14,7 @@ module.exports = {
       "sun9-82.userapi.com",
       "sun9-39.userapi.com",
       "www.freeiconspng.com",
+      "sun9-87.userapi.com",
     ],
   }
 }

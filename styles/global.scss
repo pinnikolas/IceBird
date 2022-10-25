@@ -36,11 +36,18 @@ body {
   }
 }
 
+// Header
+
 @import "../components/Header/header.scss";
+
+// SideBar
+
 @import "../components/SideBar/sideBar.scss";
 
 // Profile
 
+@import "../components/Profile/ProfileMain/profileMain.scss";
 @import "../components/Profile/ProfileHeader/profileHeader.scss";
 @import "../components/Profile/ProfileMainTabs/profileMainTabs.scss";
 @import "../components/Profile/ProfileMainPhotos/profileMainPhotos.scss";
+@import "../components/Profile/ProfileFriends/profileFriends.scss";
