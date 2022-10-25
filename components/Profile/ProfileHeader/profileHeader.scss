@@ -3,12 +3,24 @@
 }
 
 .profile-header {
-  padding: 25px;
-  background-color: #fff;
+  background: radial-gradient(circle, rgba(219, 152, 152, 1) 0%, rgba(148, 233, 178, 1) 100%);
+  position: relative;
   border-radius: 10px;
 
-  border: 1px solid #d3d9de;
   box-shadow: 0px 0px 14px 1px rgba(153, 160, 165, 0.2);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  &__background {
+    min-height: 200px;
+  }
 
   &__name {
     font-family: "Poppins";
@@ -20,6 +32,17 @@
     font-family: "Poppins";
     font-weight: 400;
     font-size: 12px;
+  }
+
+  &__image {
+    height: 170px;
+    width: 170px;
+    border-radius: 100%;
+    border: 4px solid #fff;
+
+    position: absolute;
+    top: 40%;
+    left: 2%;
   }
 
   &__button {
@@ -43,12 +66,12 @@
   &__information {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     &-block {
       display: flex;
       flex-direction: column;
       gap: 8px;
+      padding-left: 180px;
     }
 
     &-status {

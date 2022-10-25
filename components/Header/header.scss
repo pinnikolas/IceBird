@@ -4,7 +4,7 @@
 }
 
 .header {
-  background-color: #edeef0;
+  background-color: #fff;
   padding: 5px 0;
   margin-bottom: 20px;
 
@@ -36,11 +36,8 @@
   }
 
   &__profile-image {
-    width: 35px;
-    height: 35px;
     border-radius: 100%;
     background-color: #fff;
-    padding: 5px;
     cursor: pointer;
   }
 }

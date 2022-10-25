@@ -1,4 +1,6 @@
+import React from "react";
 import { useState } from "react";
+import Image from "next/image";
 
 const ProfileMainPhotos = () => {
   const [profileMainPhotosList, setProfileMainPhotosList] = useState([
@@ -57,7 +59,7 @@ const ProfileMainPhotos = () => {
         {profileMainPhotosList.map(({ imageUrl, imageName, id }) => {
           return (
             <li className="profile-main__photos-item" key={id}>
-              <img src={imageUrl} alt={imageName} />
+              <Image src={imageUrl} alt={imageName} height={126} width={126} objectFit="cover"/>
             </li>
           );
         })}

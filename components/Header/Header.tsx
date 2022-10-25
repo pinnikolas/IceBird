@@ -1,4 +1,6 @@
 import Link from "next/link";
+import React from "react";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -15,10 +17,12 @@ const Header = () => {
               placeholder="Search"
             />
           </div>
-          <img
-            className="header__profile-image"
+          <Image
             src="https://www.freeiconspng.com/thumbs/profile-icon-png/profile-icon-9.png"
             alt="profile-icon"
+            width={35}
+            height={35}
+            className="header__profile-image"
           />
         </div>
       </div>

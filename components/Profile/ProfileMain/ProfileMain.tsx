@@ -1,3 +1,4 @@
+import React from "react";
 import ProfileMainPhotos from "../ProfileMainPhotos/ProfileMainPhotos";
 import ProfileMainTabs from "../ProfileMainTabs/ProfileMainTabs";
 

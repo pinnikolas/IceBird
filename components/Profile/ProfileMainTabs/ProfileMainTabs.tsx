@@ -3,6 +3,7 @@ import PhotoSizeSelectActualOutlinedIcon from "@mui/icons-material/PhotoSizeSele
 import PlayCircleOutlineOutlinedIcon from "@mui/icons-material/PlayCircleOutlineOutlined";
 import MusicNoteOutlinedIcon from "@mui/icons-material/MusicNoteOutlined";
 import ProfileMainPhotos from "../ProfileMainPhotos/ProfileMainPhotos";
+import React from "react";
 
 const ProfileMainTabs = () => {
   const [
@@ -35,7 +36,7 @@ const ProfileMainTabs = () => {
   return (
     <div className="profile-main__tabs">
       <div className="profile-main__tabs-navigation">
-        <ul className="profile-main__tabs-menu" hidden="1">
+        <ul className="profile-main__tabs-menu">
           {profileMainPhotosNavigationItems.map(
             ({ itemName, itemIcon, id }) => {
               return (
