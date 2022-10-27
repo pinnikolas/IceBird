@@ -13,6 +13,7 @@ const ProfileMaim = () => {
     dispatch(addPost({ profilePostsText }));
     setProfilePostsText("");
   };
+
   return (
     <div className="profile-main">
       <div className="profile-main__column">

@@ -72,7 +72,7 @@ const ProfileFriends = () => {
       <div className="friends__list">
         {friendsList.map(({ name, urlImage, id }) => {
           return (
-            <Link href="/" key={id}>
+            <Link href="/friends" key={id}>
               <li className="friends__item">
                 <Image
                   className="friends__item-image"

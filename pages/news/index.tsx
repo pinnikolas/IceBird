@@ -6,6 +6,7 @@ const News = () => {
       <Head>
         <title>News</title>
       </Head>
+      <h1 className="news__title">news will be here</h1>
     </div>
   );
 };

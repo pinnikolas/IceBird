@@ -12,7 +12,7 @@ const SideBar = () => {
   const [sidebarElements, setSideBarElements] = useState([
     {
       elementName: "My profile",
-      href: "/Profile",
+      href: "/profile",
       icon: <AccountCircleOutlinedIcon fontSize="small" color="primary" />,
       id: 1,
     },

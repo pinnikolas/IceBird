@@ -25,7 +25,7 @@
     "**/*.tsx",
     "server/index.jsx",
     "pages/index.js",
-    "pages/Profile/index.jsx"
+    "pages/profile/index.jsx"
   ],
   "exclude": [
     "node_modules"
