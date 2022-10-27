@@ -1,0 +1,44 @@
+.profile-post__item {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-block {
+      display: flex;
+      align-items: center;
+    }
+
+    &-information {
+      margin-left: 10px;
+    }
+
+    &-name {
+      color: #2a5885;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-date {
+      font-size: 12px;
+      color: #818c99;
+    }
+
+    &-delete {
+      cursor: pointer;
+    }
+  }
+
+  &-image {
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  &-content {
+    padding-top: 8px;
+  }
+
+}

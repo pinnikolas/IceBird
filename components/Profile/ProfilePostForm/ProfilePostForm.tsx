@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const ProfilePostForm = () => {
+const ProfilePostForm = ({
+  handleSubmit,
+  profilePostsText,
+  setProfilePostsText,
+}) => {
   return (
     <div className="profile-post__form">
       <div className="profile-post__form-inner">
@@ -19,11 +23,20 @@ const ProfilePostForm = () => {
         <textarea
           className="profile-post__form-input"
           placeholder="What's new?"
+          value={profilePostsText}
+          onChange={(e) => {
+            setProfilePostsText(e.target.value);
+          }}
         />
       </div>
       <div className="profile-post__form-bottom">
         <p className="profile-post__form-bottom-text">coming soon...</p>
-        <button className="profile-post__form-bottom-button">Post</button>
+        <button
+          className="profile-post__form-bottom-button"
+          onClick={handleSubmit}
+        >
+          Post
+        </button>
       </div>
     </div>
   );
