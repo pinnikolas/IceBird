@@ -15,7 +15,8 @@ a {
 }
 
 button,
-input {
+input,
+textarea {
   border: none;
   outline: none;
 }
@@ -51,3 +52,4 @@ body {
 @import "../components/Profile/ProfileMainTabs/profileMainTabs.scss";
 @import "../components/Profile/ProfileMainPhotos/profileMainPhotos.scss";
 @import "../components/Profile/ProfileFriends/profileFriends.scss";
+@import "../components/Profile/ProfilePostForm/profilePostForm.scss";

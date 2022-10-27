@@ -1,4 +1,4 @@
-import ProfileMaim from "../../components/Profile/ProfileMain/ProfileMain";
+import ProfileMain from "../../components/Profile/ProfileMain/ProfileMain";
 import ProfileHeader from "../../components/Profile/ProfileHeader/ProfileHeader";
 import Head from "next/head";
 import axios from "axios";
@@ -27,7 +27,7 @@ const MyProfile = () => {
         <title>Nikolay Talish</title>
       </Head>
       <ProfileHeader />
-      <ProfileMaim />
+      <ProfileMain />
     </div>
   );
 };
