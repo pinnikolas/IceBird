@@ -1,17 +1,17 @@
-import React from "react";
 import ProfileFriends from "../ProfileFriends/ProfileFriends";
 import ProfileMainTabs from "../ProfileMainTabs/ProfileMainTabs";
 import ProfilePostForm from "../ProfilePostForm/ProfilePostForm";
 import ProfilePosts from "../ProfilePosts/ProfilePosts";
 import { useState } from "react";
-import useDispatch from "react-redux";
+import { useDispatch } from "react-redux";
 import { addPost } from "../../../store/Slices/PostSlice";
 
 const ProfileMaim = () => {
   const [profilePostsText, setProfilePostsText] = useState("");
   const dispatch = useDispatch();
   const addNewPost = () => {
-    dispatch(addPost(profilePostsText));
+    dispatch(addPost({ profilePostsText }));
+    setProfilePostsText("");
   };
   return (
     <div className="profile-main">

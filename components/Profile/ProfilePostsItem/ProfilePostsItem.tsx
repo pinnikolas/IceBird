@@ -1,8 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
+import { useDispatch } from "react-redux";
+import { deletePost } from "../../../store/Slices/PostSlice";
 
-const ProfilePostsItem = ({ name, surname, date, profilePostsText }) => {
+const ProfilePostsItem = ({ name, surname, date, profilePostsText, id }) => {
+  const dispatch = useDispatch();
   return (
     <div className="profile-post__item">
       <div className="profile-post__item-header">
@@ -31,6 +34,9 @@ const ProfilePostsItem = ({ name, surname, date, profilePostsText }) => {
         <DeleteOutlinedIcon
           sx={{ color: "red" }}
           className="profile-post__item-header-delete"
+          onClick={() => {
+            dispatch(deletePost({id}));
+          }}
         />
       </div>
       <div className="profile-post__item-content">{profilePostsText}</div>
