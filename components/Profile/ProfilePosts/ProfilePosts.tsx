@@ -1,7 +1,15 @@
 import ProfilePostsItem from "../ProfilePostsItem/ProfilePostsItem";
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 const ProfilePosts = ({}) => {
   const profilePosts = useSelector((state) => state.profilePosts.profilePosts);
+  useEffect(() => {
+    axios.get("/api").then((response) => {
+      console.log(response.data[0].profilePosts);
+    });
+  }, []);
   return (
     <div className="profile-posts">
       {profilePosts.map(
@@ -9,7 +17,7 @@ const ProfilePosts = ({}) => {
           post: JSX.IntrinsicAttributes & {
             name: string;
             surname: string;
-            date: any;
+            date: string;
             profilePostsText: string;
             id: any;
           }

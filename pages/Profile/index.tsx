@@ -5,12 +5,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const MyProfile = () => {
-  const url = "/api";
-  useEffect(() => {
-    fetch(url).then((data) => {
-      console.log(data);
-    });
-  }, []);
+  // const url = "/api";
+  // useEffect(() => {
+  //   fetch(url).then((data) => {
+  //     console.log(data);
+  //   });
+  // }, []);
   return (
     <div className="profile">
       <Head>

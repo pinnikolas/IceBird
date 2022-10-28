@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addPost } from "../../../store/Slices/PostSlice";
 
-const ProfileMaim = () => {
+const ProfileMain = () => {
   const [profilePostsText, setProfilePostsText] = useState("");
   const dispatch = useDispatch();
   const addNewPost = () => {
@@ -32,4 +32,4 @@ const ProfileMaim = () => {
   );
 };
 
-export default ProfileMaim;
+export default ProfileMain;

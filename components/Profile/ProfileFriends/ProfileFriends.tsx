@@ -55,34 +55,34 @@ const ProfileFriends = () => {
     },
   ]);
   return (
-    <div className="friends">
-      <div className="friends__header">
+    <div className="profile-friends">
+      <div className="profile-friends__header">
         <Link href="/friends">
-          <div className="friends__header-title">
+          <div className="profile-friends__header-title">
             Friends: <span>20</span>
           </div>
         </Link>
         <Link href="/">
-          <div className="friends__header-requests">
+          <div className="profile-friends__header-requests">
             <span>34</span> requests{" "}
             <KeyboardArrowRightOutlinedIcon color="primary" />
           </div>
         </Link>
       </div>
-      <div className="friends__list">
+      <div className="profile-friends__list">
         {friendsList.map(({ name, urlImage, id }) => {
           return (
             <Link href="/friends" key={id}>
-              <li className="friends__item">
+              <li className="profile-friends__item">
                 <Image
-                  className="friends__item-image"
+                  className="profile-friends__item-image"
                   src={urlImage}
                   width={64}
                   height={64}
                   objectFit="cover"
                   alt="image profile"
                 />
-                <p className="friends__item-name">{name}</p>
+                <p className="profile-friends__item-name">{name}</p>
               </li>
             </Link>
           );
