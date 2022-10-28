@@ -4,7 +4,7 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { useDispatch } from "react-redux";
 import { deletePost } from "../../../store/Slices/PostSlice";
 import { FC } from "react";
-type profilePostsItemTypes = {
+interface IprofilePostsItemTypes {
   name: string;
   surname: string;
   date: string;
@@ -12,7 +12,7 @@ type profilePostsItemTypes = {
   id: string;
 };
 
-const ProfilePostsItem: FC<profilePostsItemTypes> = ({
+const ProfilePostsItem: FC<IprofilePostsItemTypes> = ({
   name,
   surname,
   date,

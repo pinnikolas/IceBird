@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { FC, useEffect, useState } from "react";
 import axios from "axios";
 
-const ProfilePosts:FC = () => {
+const ProfilePosts: FC = () => {
   const profilePosts = useSelector((state) => state.profilePosts.profilePosts);
   useEffect(() => {
     axios.get("/api").then((response) => {

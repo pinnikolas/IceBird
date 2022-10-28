@@ -6,7 +6,7 @@ import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addPost } from "../../../store/Slices/PostSlice";
 
-const ProfileMain:FC = () => {
+const ProfileMain: FC = () => {
   const [profilePostsText, setProfilePostsText] = useState("");
   const dispatch = useDispatch();
   const addNewPost = () => {

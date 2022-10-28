@@ -6,18 +6,33 @@ import Image from "next/image";
 import Link from "next/link";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 
-const FriendsList:FC = () => {
+const FriendsList: FC = () => {
   const [friendsList, setFriendsList] = useState([]);
-  const url = "/api";
+  const [filterList, setFilterList] = useState([]);
+
+  const onSearch = (value) => {
+    const searchContact = filterList.filter((contact) => {
+      return contact.name.toLowerCase().includes(value.toLowerCase());
+    });
+    setFriendsList(searchContact);
+  };
+
   useEffect(() => {
-    axios(url).then((response) => {
+    axios("/api").then((response) => {
       setFriendsList(response.data[0].friendsList);
+      setFilterList(response.data[0].friendsList);
     });
   }, []);
+
   return (
     <div className="friends-list">
       <FriendsListHeader />
-      <FriendsSearch />
+      <FriendsSearch
+        onSearch={onSearch}
+        changeSearchValue={function (value: any): string {
+          throw new Error("Function not implemented.");
+        }}
+      />
       <ul className="friends-list__menu">
         {friendsList.map(({ name, surname, imgUrl, id }) => {
           return (

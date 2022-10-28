@@ -1,7 +1,17 @@
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { FC } from "react";
+import { FC, useState } from "react";
+interface IFriendsSearch {
+  onSearch: (value: string) => void;
+  changeSearchValue: (value: any) => string;
+}
 
-const FriendsSearch:FC = () => {
+const FriendsSearch: FC<IFriendsSearch> = ({ onSearch }) => {
+  const [searchValue, setSearchValue] = useState(" ");
+
+  const changeSearchValue = (e) => {
+    onSearch(e.target.value);
+    setSearchValue(e.target.value);
+  };
   return (
     <div className="friends-search">
       <SearchOutlinedIcon
@@ -12,6 +22,7 @@ const FriendsSearch:FC = () => {
         type="text"
         className="friends-search__input"
         placeholder="Search friends"
+        onChange={changeSearchValue}
       />
     </div>
   );
