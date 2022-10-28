@@ -1,7 +1,8 @@
 import Head from "next/head";
+import { FC } from "react";
 import FriendsList from "../../components/Friends/FriendsList/FriendsList";
 
-const Frineds = () => {
+const Frineds:FC = () => {
   return (
     <div className="friends">
       <Head>

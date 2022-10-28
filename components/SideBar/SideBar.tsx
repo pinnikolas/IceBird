@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import Link from "next/link";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
@@ -8,7 +8,7 @@ import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 import PhotoSizeSelectActualOutlinedIcon from "@mui/icons-material/PhotoSizeSelectActualOutlined";
 import React from "react";
 
-const SideBar = () => {
+const SideBar:FC = () => {
   const [sidebarElements, setSideBarElements] = useState([
     {
       elementName: "My profile",

@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { FC } from "react";
 
-const News = () => {
+const News:FC = () => {
   return (
     <div className="hews">
       <Head>

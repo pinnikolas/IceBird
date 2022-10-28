@@ -1,9 +1,9 @@
 import ProfilePostsItem from "../ProfilePostsItem/ProfilePostsItem";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import axios from "axios";
 
-const ProfilePosts = ({}) => {
+const ProfilePosts:FC = () => {
   const profilePosts = useSelector((state) => state.profilePosts.profilePosts);
   useEffect(() => {
     axios.get("/api").then((response) => {

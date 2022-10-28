@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { FC } from "react";
 
-const Messenger = () => {
+const Messenger:FC = () => {
   return ( 
     <div className="messenger">
       <Head>

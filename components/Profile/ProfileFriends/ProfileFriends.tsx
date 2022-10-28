@@ -1,9 +1,9 @@
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { FC, useState } from "react";
 
-const ProfileFriends = () => {
+const ProfileFriends:FC = () => {
   const [friendsList, setFriendsList] = useState([
     {
       name: "Maxim",

@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import PhotoSizeSelectActualOutlinedIcon from "@mui/icons-material/PhotoSizeSelectActualOutlined";
 import PlayCircleOutlineOutlinedIcon from "@mui/icons-material/PlayCircleOutlineOutlined";
 import MusicNoteOutlinedIcon from "@mui/icons-material/MusicNoteOutlined";
 import ProfileMainPhotos from "../ProfileMainPhotos/ProfileMainPhotos";
 import React from "react";
 
-const ProfileMainTabs = () => {
+const ProfileMainTabs:FC = () => {
   const [
     profileMainPhotosNavigationItems,
     setProfileMainPhotosNavigationItems,

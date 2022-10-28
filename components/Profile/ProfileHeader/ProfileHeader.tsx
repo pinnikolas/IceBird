@@ -2,10 +2,10 @@ import Link from "next/link";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
 
-const ProfileHeader = ({}) => {
+const ProfileHeader:FC = () => {
   return (
     <div className="profile-header">
       <div className="profile-header__background"></div>

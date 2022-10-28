@@ -1,12 +1,12 @@
 import FriendsListHeader from "../FriendsListHeader/FriendsListHeader";
 import FriendsSearch from "../FriendsSearch/FriendsSearch";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 
-const FriendsList = () => {
+const FriendsList:FC = () => {
   const [friendsList, setFriendsList] = useState([]);
   const url = "/api";
   useEffect(() => {

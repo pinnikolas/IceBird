@@ -1,4 +1,6 @@
-const FriendsListHeader = () => {
+import { FC } from "react";
+
+const FriendsListHeader:FC = () => {
   return ( 
     <div className="friends__list-header">
       
