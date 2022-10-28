@@ -1,0 +1,15 @@
+.friends-list__header {
+  padding: 8px;
+  background-color: #fafbfc;
+  border-radius: 10px 10px 0 0;
+  margin-top: 20px;
+  min-width: 550px;
+  margin-left: 16px;
+
+  border: 1px solid #d3d9de;
+  box-shadow: 0px 0px 14px 1px rgba(153, 160, 165, 0.2);
+  &-title {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}

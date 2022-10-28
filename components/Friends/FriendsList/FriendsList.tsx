@@ -25,44 +25,47 @@ const FriendsList: FC = () => {
   }, []);
 
   return (
-    <div className="friends-list">
+    <>
       <FriendsListHeader />
-      <FriendsSearch
-        onSearch={onSearch}
-        changeSearchValue={function (value: any): string {
-          throw new Error("Function not implemented.");
-        }}
-      />
-      <ul className="friends-list__menu">
-        {friendsList.map(({ name, surname, imgUrl, id }) => {
-          return (
-            <li className="friends-list__item" key={id}>
-              <div className="friends-list__item-block">
-                <Image
-                  src={imgUrl}
-                  width={80}
-                  height={80}
-                  className="friends-list__item-image"
-                  alt="profile image"
-                />
-                <div className="friends-list__item-person">
-                  <Link href={`/${surname}`}>
-                    <p className="friends-list__item-name">
-                      {name} {surname}
-                    </p>
-                  </Link>
-                  <p className="friends-list__item-message">Write messege</p>
+
+      <div className="friends-list">
+        <FriendsSearch
+          onSearch={onSearch}
+          changeSearchValue={function (value: any): string {
+            throw new Error("Function not implemented.");
+          }}
+        />
+        <ul className="friends-list__menu">
+          {friendsList.map(({ name, surname, imgUrl, id }) => {
+            return (
+              <li className="friends-list__item" key={id}>
+                <div className="friends-list__item-block">
+                  <Image
+                    src={imgUrl}
+                    width={80}
+                    height={80}
+                    className="friends-list__item-image"
+                    alt="profile image"
+                  />
+                  <div className="friends-list__item-person">
+                    <Link href={`/${surname}`}>
+                      <p className="friends-list__item-name">
+                        {name} {surname}
+                      </p>
+                    </Link>
+                    <p className="friends-list__item-message">Write messege</p>
+                  </div>
                 </div>
-              </div>
-              <MoreHorizOutlinedIcon
-                color="action"
-                className="friends-list__item-more"
-              />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+                <MoreHorizOutlinedIcon
+                  color="action"
+                  className="friends-list__item-more"
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 };
 
