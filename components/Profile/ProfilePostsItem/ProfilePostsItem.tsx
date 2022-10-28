@@ -3,8 +3,22 @@ import Image from "next/image";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { useDispatch } from "react-redux";
 import { deletePost } from "../../../store/Slices/PostSlice";
+import { FC } from "react";
+type profilePostsItemTypes = {
+  name: string;
+  surname: string;
+  date: string;
+  profilePostsText: string;
+  id: string;
+};
 
-const ProfilePostsItem = ({ name, surname, date, profilePostsText, id }) => {
+const ProfilePostsItem: FC<profilePostsItemTypes> = ({
+  name,
+  surname,
+  date,
+  profilePostsText,
+  id,
+}) => {
   const dispatch = useDispatch();
   return (
     <div className="profile-post__item">

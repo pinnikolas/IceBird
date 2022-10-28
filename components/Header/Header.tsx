@@ -1,8 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { FC } from "react";
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className="header">
       <div className="container container-header">

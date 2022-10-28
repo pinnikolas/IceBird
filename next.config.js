@@ -6,6 +6,7 @@ module.exports = {
   images: {
     domains: [
       'sun2.velcom-by-minsk.userapi.com',
+      "sun1.velcom-by-minsk.userapi.com",
       "sun9-16.userapi.com",
       "sun9-84.userapi.com",
       "sun9-34.userapi.com",

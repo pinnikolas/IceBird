@@ -1,0 +1,13 @@
+.friends-search {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dce1e6;
+
+  &__input {
+    width: 100%;
+    padding: 14px 28px 14px 10px;
+    &::placeholder {
+      color: #93a3bc;
+    }
+  }
+}

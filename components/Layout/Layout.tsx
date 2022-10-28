@@ -1,7 +1,12 @@
 import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
+import { FC, ReactNode } from "react";
 
-const Layout = ({ children }) => {
+type layoutProps = {
+  children: ReactNode;
+};
+
+const Layout: FC<layoutProps> = ({ children }) => {
   return (
     <>
       <Header />

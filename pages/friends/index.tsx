@@ -1,4 +1,5 @@
 import Head from "next/head";
+import FriendsList from "../../components/Friends/FriendsList/FriendsList";
 
 const Frineds = () => {
   return (
@@ -6,7 +7,12 @@ const Frineds = () => {
       <Head>
         <title>Friends</title>
       </Head>
-      <h1 className="frineds__title">Friends will be here</h1>
+      <div className="friends">
+        <div className="friends-left">
+          <FriendsList />
+        </div>
+        <div className="friends-right"></div>
+      </div>
     </div>
   );
 };

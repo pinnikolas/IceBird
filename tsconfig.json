@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "server/index.jsx",
+    "server/index.js",
     "pages/index.js",
     "pages/profile/index.jsx"
   ],
