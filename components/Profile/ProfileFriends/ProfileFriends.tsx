@@ -1,59 +1,17 @@
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 
-const ProfileFriends:FC = () => {
-  const [friendsList, setFriendsList] = useState([
-    {
-      name: "Maxim",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 1,
-    },
-    {
-      name: "Nikita",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 2,
-    },
-    {
-      name: "Denis",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 3,
-    },
-    {
-      name: "Stanislav",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 4,
-    },
-    {
-      name: "Dmitriy",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 5,
-    },
-    {
-      name: "German",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 6,
-    },
-    {
-      name: "Sergey",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 7,
-    },
-    {
-      name: "Natalya",
-      urlImage:
-        "https://sun9-87.userapi.com/impg/N4Lc16UToQFI9P7M3zaB1mQziNvtZzbnQpyqhg/OawMOfoW8cQ.jpg?size=320x320&quality=96&sign=80d419ff4265d1d1777c1d3cf2e4b356&c_uniq_tag=O_5m2M9zvls1X-Lt1RSQI33-5oR0U6DKHYRlhmZ6mFE&type=album",
-      id: 8,
-    },
-  ]);
+const ProfileFriends: FC = () => {
+  const [friendsList, setFriendsList] = useState([]);
+  useEffect(() => {
+    axios("/api").then((response) => {
+      setFriendsList(response.data[0].friendsList);
+    });
+  }, []);
+
   return (
     <div className="profile-friends">
       <div className="profile-friends__header">
@@ -70,13 +28,13 @@ const ProfileFriends:FC = () => {
         </Link>
       </div>
       <div className="profile-friends__list">
-        {friendsList.map(({ name, urlImage, id }) => {
+        {friendsList.map(({ name, imgUrl, id }) => {
           return (
             <Link href="/friends" key={id}>
               <li className="profile-friends__item">
                 <Image
                   className="profile-friends__item-image"
-                  src={urlImage}
+                  src={imgUrl}
                   width={64}
                   height={64}
                   objectFit="cover"
