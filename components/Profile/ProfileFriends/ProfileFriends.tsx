@@ -20,9 +20,9 @@ const ProfileFriends: FC = () => {
             Friends: <span>20</span>
           </div>
         </Link>
-        <Link href="/">
+        <Link href="/friends">
           <div className="profile-friends__header-requests">
-            <span>34</span> requests{" "}
+            <span>34</span> requests
             <KeyboardArrowRightOutlinedIcon color="primary" />
           </div>
         </Link>
