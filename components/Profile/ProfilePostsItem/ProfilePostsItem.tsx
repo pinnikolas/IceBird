@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
-import { useDispatch } from "react-redux";
 import { deletePost } from "../../../store/Slices/PostSlice";
+import { useAppDispatch } from "../../../hooks";
 import { FC } from "react";
 interface IprofilePostsItemTypes {
   name: string;
@@ -10,7 +10,7 @@ interface IprofilePostsItemTypes {
   date: string;
   profilePostsText: string;
   id: string;
-};
+}
 
 const ProfilePostsItem: FC<IprofilePostsItemTypes> = ({
   name,
@@ -19,7 +19,7 @@ const ProfilePostsItem: FC<IprofilePostsItemTypes> = ({
   profilePostsText,
   id,
 }) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   return (
     <div className="profile-post__item">
       <div className="profile-post__item-header">
@@ -45,7 +45,7 @@ const ProfilePostsItem: FC<IprofilePostsItemTypes> = ({
           sx={{ color: "red" }}
           className="profile-post__item-header-delete"
           onClick={() => {
-            dispatch(deletePost({ id }));
+            dispatch(deletePost(id));
           }}
         />
       </div>

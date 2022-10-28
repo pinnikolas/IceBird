@@ -1,33 +1,44 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+type Post = {
+  id: string;
+  profilePostsText: string;
+  name: string;
+  surname: string;
+  date: string;
+};
+type PostsState = {
+  list: Post[];
+};
+const initialState: PostsState = {
+  list: [],
+};
 const PostSlice = createSlice({
   name: "profilePosts",
-  initialState: {
-    profilePosts: [
-      {
-        id: new Date().toISOString(),
-        profilePostsText:
-          "something Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis unde illum corporis deserunt voluptatibus. Dicta officiis doloremque ex facilis quidem qui laboriosam nesciunt? Voluptates unde, esse minus voluptas debitis quas!",
-        name: "Nikolay",
-        surname: "Talsih",
-        date: "12 Oct 2021",
-      },
-    ],
-  },
+  initialState,
+  // initialState: {
+  //   profilePosts: [
+  //     {
+  //       id: new Date().toISOString(),
+  //       profilePostsText:
+  //         "something Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis unde illum corporis deserunt voluptatibus. Dicta officiis doloremque ex facilis quidem qui laboriosam nesciunt? Voluptates unde, esse minus voluptas debitis quas!",
+  //       name: "Nikolay",
+  //       surname: "Talsih",
+  //       date: new Date().toISOString(),
+  //     },
+  //   ],
+  // },
   reducers: {
-    addPost(state, action) {
-      state.profilePosts.push({
+    addPost(state, action: PayloadAction<string>) {
+      state.list.push({
         id: new Date().toISOString(),
-        profilePostsText: action.payload.profilePostsText,
+        profilePostsText: action.payload,
         name: "Nikolay",
         surname: "Talsih",
         date: new Date().toISOString(),
       });
     },
-    deletePost(state, action) {
-      state.profilePosts = state.profilePosts.filter(
-        (post) => post.id !== action.payload.id
-      );
+    deletePost(state, action: PayloadAction<string>) {
+      state.list = state.list.filter((post) => post.id !== action.payload);
     },
   },
 });

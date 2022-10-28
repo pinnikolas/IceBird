@@ -3,14 +3,14 @@ import ProfileMainTabs from "../ProfileMainTabs/ProfileMainTabs";
 import ProfilePostForm from "../ProfilePostForm/ProfilePostForm";
 import ProfilePosts from "../ProfilePosts/ProfilePosts";
 import { FC, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../hooks";
 import { addPost } from "../../../store/Slices/PostSlice";
 
 const ProfileMain: FC = () => {
   const [profilePostsText, setProfilePostsText] = useState("");
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const addNewPost = () => {
-    dispatch(addPost({ profilePostsText }));
+    dispatch(addPost(profilePostsText));
     setProfilePostsText("");
   };
 
